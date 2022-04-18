@@ -16,7 +16,6 @@ public class UserService {
     }
 
     public User getUser(Long id){
-        //Optional will always contain value, (Just wanted an excuse ot use optionals)
         Optional<User> optionalUser = userRepository.findById(id);
         return optionalUser.orElse(null);
     }
